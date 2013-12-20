@@ -1,0 +1,1 @@
+<h2>Добавление <?php echo HTML::anchor('/user/clothing', 'Вернутся', array('class' => 'header-link')); ?> </h2>

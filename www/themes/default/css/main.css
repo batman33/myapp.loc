@@ -330,3 +330,9 @@ textarea {
 #footer a:hover {
 	text-decoration: underline;
 }
+
+
+/* header-link */
+.header-link {
+	font-size: 50% !important;
+}

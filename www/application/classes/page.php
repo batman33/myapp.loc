@@ -17,11 +17,11 @@ abstract class Page extends Controller_Template {
 		
 		$this->main_config = Kohana::$config->load('main');
 		
-	    Kohana::add_path('themes/'.$this->main_config->get('web_theme').'/');
+	    //Kohana::add_path($this->main_config->get('web_theme').'/');
 	    parent::before();
 		
-		$this->template->styles = array('main');
-		$this->template->scripts = array();
+		$this->template->styles = array('main', 'kendo/kendo.common.min', 'kendo/kendo.silver.min');
+		$this->template->scripts = array('jquery.min', 'kendo.min', 'console');
 		
     }
 	

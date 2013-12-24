@@ -9,7 +9,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-size: 12px;
-	background: #ffffff url('images/bg.gif') left top repeat-x; 
+	background: #ffffff url('../images/bg.gif') left top repeat-x; 
 	color: #1e1e1e;
 }
 
@@ -168,7 +168,7 @@ img.alignleft {
 
 .posted {
 	font-size: 11px;
-	background: url('images/dotted1.gif') left bottom repeat-x;
+	background: url('../images/dotted1.gif') left bottom repeat-x;
 	margin-top: 0px;
 	padding-bottom: 4px;
 	margin-bottom: 0px;
@@ -193,7 +193,7 @@ img.alignleft {
 }
 
 .postcomment {
-	background: url('images/iconcom.gif') no-repeat left center;
+	background: url('../images/iconcom.gif') no-repeat left center;
 	padding: 0px 0px 3px 19px;
 	
 }
@@ -252,7 +252,7 @@ textarea {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #1e1e1e;
 	padding: 0px 10px 5px 13px;
-	background: url('images/h2bg.gif') no-repeat top left;
+	background: url('../images/h2bg.gif') no-repeat top left;
 	font-size: 16px;
 	font-weight: normal;
 	margin-top: 0px;
@@ -282,7 +282,7 @@ textarea {
 #sidebar ul li ul li a, #sidebar ul li ul li a:visited, #sidebar ul li ul li a:active {
 	font-size: 12px;
 	padding-left: 10px;
-	background:  url('images/link.gif') no-repeat left 4px;
+	background:  url('../images/link.gif') no-repeat left 4px;
 	text-decoration: none;
 }
 
@@ -308,7 +308,7 @@ textarea {
 
 #sidebar ul li ul li {	
 	margin-left: 3px;
-	background: url('images/dotted2.gif') 11px bottom no-repeat;
+	background: url('../images/dotted2.gif') 11px bottom no-repeat;
 	margin-bottom: 1px;
 	padding: 2px 0px 4px 10px;
 }

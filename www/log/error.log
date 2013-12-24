@@ -1,0 +1,2 @@
+[Mon Dec 23 11:40:22 2013] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '}' in C:\\server\\my\\myapp\\trunk\\www\\application\\classes\\Controller\\api.php on line 33, referer: http://myapp.loc/admin/type
+[Mon Dec 23 14:45:27 2013] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method Request::redirect() in C:\\server\\my\\myapp\\trunk\\www\\application\\classes\\Controller\\api.php on line 48, referer: http://myapp.loc/admin/type

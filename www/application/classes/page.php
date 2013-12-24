@@ -20,8 +20,8 @@ abstract class Page extends Controller_Template {
 	    //Kohana::add_path($this->main_config->get('web_theme').'/');
 	    parent::before();
 		
-		$this->template->styles = array('main', 'kendo/kendo.common.min', 'kendo/kendo.silver.min');
-		$this->template->scripts = array('jquery.min', 'kendo.min', 'console');
+		$this->template->styles = array('main', 'kendo/kendo.common.min', 'kendo/kendo.default.min');
+		$this->template->scripts = array('jquery.min', 'kendo.min', 'lang/kendo.culture.ru-RU.min');
 		
     }
 	

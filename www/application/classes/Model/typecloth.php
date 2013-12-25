@@ -5,12 +5,19 @@ class Model_TypeCloth extends ORM {
     protected $_table_name = 'type_cloth';
     protected $_primary_key = 'id';
 
-    protected $_has_one = array(
-        'type' => array(
-            'model' => 'type',
-            'foreign_key' => 'id',
-            ),
+    // protected $_has_one = array(
+    //     'type' => array(
+    //         'model' => 'type',
+    //         'foreign_key' => 'id',
+    //         ),
+    //     );
+    protected $_belongs_to = array(
+          'type'  => array(
+                   'model'       => 'type',
+                   'foreign_key' => 'type_id',
+              )
         );
+
 
     public function rules()
     {

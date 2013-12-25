@@ -29,7 +29,7 @@
                         fields: {
                             id: {editable: false, nullable: true},
                             name: {type: "string", validation: {required: true, min: 4}},
-                            type: {},
+                            type_id: {},
                             description: {type: "string", validation: {min: 4}}
                         }
                     }
@@ -62,8 +62,8 @@
             toolbar: [{ name: "create", text: "Добавить Тип" }],
             columns: [
                 {field:"name", title: "Назване"},
-                {field: "description", title: "Дополнительно"},
-                {field: "type", title: "Тип", editor: typeDropDownEditor, template: "#: type.name#" },
+                {field:"description", title: "Дополнительно"},
+                {field:"type_id", title: "Тип", editor: typeDropDownEditor, template: "#: type_id.name#" },
                 {
                     command: [
                         { name: "edit",     text: "Редактировать" }, 
@@ -81,59 +81,17 @@
                     filter: "Фильтр",
                     columns: "Колонны"
                 }
-            },
-            filterable: {
-                messages: {
-                    info: "Инфо:", // sets the text on top of the filter menu
-                    filter: "Фильтры", // sets the text for the "Filter" button
-                    clear: "Отчистить", // sets the text for the "Clear" button
-
-                    // when filtering boolean numbers
-                    isTrue: "Да", // sets the text for "isTrue" radio button
-                    isFalse: "Нет", // sets the text for "isFalse" radio button
-
-                    //changes the text of the "And" and "Or" of the filter menu
-                    and: "И",
-                    or: "ИЛИ"
-                },
-                operators: {
-                    //filter menu for "string" type columns
-                    string: {
-                        eq: "Равно",
-                        neq: "Не содержит",
-                        startswith: "Начинается с",
-                        contains: "Содержит",
-                        endswith: "Заканчивается на"
-                    },
-                    //filter menu for "number" type columns
-                    number: {
-                        eq: "Равно",
-                        neq: "Разные",
-                        gte: "Больше или равно",
-                        gt: "Которые",
-                        lte: "Меньше или равно",
-                        lt: "Менее"
-                    },
-                    //filter menu for "date" type columns
-                    date: {
-                        eq: "Равно",
-                        neq: "Разные",
-                        gte: "Больше или равно",
-                        gt: "Которые",
-                        lte: "Меньше или равно",
-                        lt: "Менее"
-                    }
-                }
             }
         });
     });
 
-
     function typeDropDownEditor(container, options) {
-        $('<input required data-text-field="name" data-value-field="id" data-bind="value:' + options.field + '"/>')
+        $('<input type="text" name="type" required="required" data-text-field="name" data-value-field="id" data-bind="value:type_id" data-role="dropdownlist" />')
             .appendTo(container)
             .kendoDropDownList({
-                autoBind: true,
+                autoBind: false,
+                text: 'Выбирите тип',
+                value: '',
                 dataTextField: "name",
                 dataValueField: "id",
                 dataSource: {
@@ -145,11 +103,12 @@
                     }
                 }
             });
+
+        $('[data-text-field="name"]').val()
     }
 
     function onRequestEnd() {
     	var grid = $("#grid").data("kendoGrid");
-    		
     		grid.refresh();
     }
 

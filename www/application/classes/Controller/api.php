@@ -141,8 +141,8 @@ class Controller_Api extends Controller {
 		    	'id' => $key->id,
 		    	'name' => $key->name,
 		    	'description' => $key->description,
-		    	'type' => array(
-		    		'id' => $key->type_id,
+		    	'type_id' => array(
+		    		'id' => $key->type->id,
 		    		'name' => $key->type->name,
 		    		'description' => $key->type->description,
 		    	)
@@ -159,7 +159,7 @@ class Controller_Api extends Controller {
 	    	'id' => $typecloth->id,
 	    	'name' => $typecloth->name,
 	    	'description' => $typecloth->description,
-	    	'type' => array(
+	    	'type_id' => array(
 	    		'id' => $typecloth->type_id,
 	    		'name' => $typecloth->type->name,
 	    		'description' => $typecloth->type->description,
@@ -181,7 +181,7 @@ class Controller_Api extends Controller {
 				array(
 					'name' => $value['name'],
 					'description' => $value['description'],
-					'type_id'	=> $value['type'],
+					'type_id'	=> $value['type_id']['id'],
 				)
 			)->save();
 
@@ -202,7 +202,7 @@ class Controller_Api extends Controller {
 				array(
 					'name' => $key['name'],
 					'description' => $key['description'],
-					'type_id'	=> $key['type']['id'],
+					'type_id'	=> $key['type_id']['id'],
 				)
 			)->save();
 
